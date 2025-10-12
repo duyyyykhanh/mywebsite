@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Favorite Travel Destinations</title>
-  <style>
-    .gallery img {
-      width: 300px;
-      height: 300px;
-      object-fit: cover;
-      margin: 5px;
-      border-radius: 8px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Skip to main content -->
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
   <header>
     <h1>My Favorite Travel Destinations</h1>
+    <nav>
+      <img src="image/logo.png" alt="Logo">
+      <!-- <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul> -->
+    </nav>
   </header>
 
-  <main>
+  <main id="main-content">
     <section>
       <h2>Top 3 Places I Want to Visit</h2>
       <ul>
@@ -31,11 +34,22 @@
     </section>
 
     <section>
-      <h2>Some Pictures</h2>
-      <div>
-      <img src="image/eiffeltower.jpg" alt="Eiffel Tower in Paris" width="200">
-      <img src="image/tokyo.jpg" alt="Tokyo city at night" width="200">
-      <img src="image/newyork.jpg" alt="New York skyline" width="200">
+      <h2>Gallery (Grid Layout)</h2>
+      <div class="grid">
+        <img src="image/eiffeltower.jpg" alt="Eiffel Tower">
+        <img src="image/tokyo.jpg" alt="Tokyo city at night">
+        <img src="image/newyork.jpg" alt="New York skyline">
+        <img src="image/london.jpg" alt="London Bridge">
+      </div>
+    </section>
+
+    <section>
+      <h2>Gallery (Flex Layout)</h2>
+      <div class="flex">
+        <img src="image/eiffeltower.jpg" alt="Eiffel Tower">
+        <img src="image/tokyo.jpg" alt="Tokyo city at night">
+        <img src="image/newyork.jpg" alt="New York skyline">
+        <img src="image/london.jpg" alt="London Bridge">
       </div>
     </section>
 
