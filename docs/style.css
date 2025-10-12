@@ -1,107 +1,75 @@
-/* Body and general layout */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+/* Reset-ish */
+border-radius: 14px;
 }
 
-header, footer {
-  background-color: #2e86de;
-  color: white;
-  padding: 20px;
-  text-align: center;
+
+/* Photo gallery uses responsive grid */
+.photo-grid {
+display: grid; /* grid parent */
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+gap: 12px;
+margin-top: 12px;
+}
+.photo-grid img {
+width: 100%;
+height: 160px;
+object-fit: cover;
+border: 6px solid #fff; /* border */
+padding: 6px; /* padding */
+border-radius: 10px; /* border-radius */
+transition: transform 0.28s ease, box-shadow 0.28s ease;
 }
 
-main {
-  background-color: #fff;
-  padding: 20px;
-  max-width: 1000px;
-  margin: 20px auto;
-  border-radius: 8px;
-  flex: 1;
+
+/* Hover pseudo-class for interesting effect */
+.photo-grid img:hover {
+transform: translateY(-6px) scale(1.03);
+box-shadow: 0 12px 30px rgba(16,40,80,0.15);
 }
 
-/* Skip link styling */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: #000;
-  color: #fff;
-  padding: 8px 16px;
-  z-index: 100;
-}
-.skip-link:focus {
-  top: 0;
+
+/* nth-child selector to style every even child differently */
+.photo-grid img:nth-child(even) {
+border-radius: 24px; /* alternate border-radius for even images */
+transform-origin: center center;
 }
 
-/* Headings and paragraphs */
-h1, h2 {
-  color: #222f3e;
-  font-weight: bold;
-  text-align: center;
-}
-p {
-  line-height: 1.6;
-}
-a {
-  color: #2e86de;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-  color: #ff6b6b;
+
+/* About page layout uses flex */
+.about-me {
+display: flex;
+gap: 16px;
+align-items: center;
+flex-wrap: wrap;
 }
 
-/* Navigation */
-nav {
-  display: inline-block;
-  width: 80%;
-  text-align: center;
+
+.author-pic {
+width: 200px;
+height: 200px;
+object-fit: cover;
+border: 8px solid #fff;
+padding: 6px;
+border-radius: 50%;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.author-pic:hover { transform: scale(1.05); box-shadow: 0 8px 20px rgba(16,40,80,0.12); }
+
+
+/* Footer */
+footer {
+margin-top: 20px;
+background: #0f1724;
+color: #fff;
+padding: 12px;
+text-align: center;
 }
 
-/* Nav images only */
-nav img {
-  width: 10%;
-}
 
-/* Commented out li styling */
-/*
-li {
-  padding: 10px;
-  margin: 5px;
-}
-*/
-
-/* Grid layout */
-.grid {
-  display: grid;
-  grid-template-columns: 40% 40%;
-  justify-content: center;  /* canh giữa toàn bộ grid */
-  align-items: start;       /* căn các item lên đầu */
-  row-gap: 25px;            /* khoảng cách giữa hàng */
-  column-gap: 20px;         /* khoảng cách giữa cột */
-}
-.grid img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-/* Flex layout */
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-.flex img {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
+/* Responsive tweaks */
+@media (max-width: 720px) {
+h1 { font-size: 1.6rem; }
+.grid-intro { grid-template-columns: 1fr; }
+.logo { display: none; }
+.main-nav { justify-content: center; }
 }
