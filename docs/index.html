@@ -1,68 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Favorite Travel Destinations</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WanderList — Home</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- Skip to main content -->
+<a href="#main-content" class="skip-link">Skip to Main Content</a>
 
-  <!-- Skip to main content -->
-  <a href="#main-content" class="skip-link">Skip to Main Content</a>
 
-  <header>
-    <h1>My Favorite Travel Destinations</h1>
-    <nav>
-      <img src="image/logo.png" alt="Logo">
-      <!-- <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul> -->
-    </nav>
-  </header>
+<header>
+<div class="nav-wrap">
+<img src="images/logo.png" alt="WanderList logo" class="logo">
+<nav class="main-nav" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="about.html">About</a>
+</nav>
+</div>
+<h1>WanderList</h1>
+<p>Your short list of travel places to explore</p>
+</header>
 
-  <main id="main-content">
-    <section>
-      <h2>Top 3 Places I Want to Visit</h2>
-      <ul>
-        <li>Paris, France</li>
-        <li>Tokyo, Japan</li>
-        <li>New York, USA</li>
-      </ul>
-    </section>
 
-    <section>
-      <h2>Gallery (Grid Layout)</h2>
-      <div class="grid">
-        <img src="image/eiffeltower.jpg" alt="Eiffel Tower">
-        <img src="image/tokyo.jpg" alt="Tokyo city at night">
-        <img src="image/newyork.jpg" alt="New York skyline">
-        <img src="image/london.jpg" alt="London Bridge">
-      </div>
-    </section>
+<main id="main-content">
+<section class="intro grid-intro">
+<article>
+<h2>Featured Destination</h2>
+<img src="images/paris.jpg" alt="Eiffel Tower in Paris" class="featured">
+<p>Paris is the city of lights and croissants. Explore museums, parks, and charming streets.</p>
+</article>
+<aside>
+<h2>Quick Picks</h2>
+<ul>
+<li>Tokyo, Japan</li>
+<li>Reykjavík, Iceland</li>
+<li>Marrakesh, Morocco</li>
+</ul>
+</aside>
+</section>
 
-    <section>
-      <h2>Gallery (Flex Layout)</h2>
-      <div class="flex">
-        <img src="image/eiffeltower.jpg" alt="Eiffel Tower">
-        <img src="image/tokyo.jpg" alt="Tokyo city at night">
-        <img src="image/newyork.jpg" alt="New York skyline">
-        <img src="image/london.jpg" alt="London Bridge">
-      </div>
-    </section>
 
-    <section>
-      <h2>Learn More</h2>
-      <p>For more travel inspiration, visit 
-        <a href="https://www.lonelyplanet.com" target="_blank">Lonely Planet</a>.
-      </p>
-    </section>
-  </main>
+<section class="cards flex-cards">
+<article class="card">
+<img src="images/tokyo.jpg" alt="Tokyo skyline at night">
+<h3>Tokyo</h3>
+<p>Fast-paced, futuristic, and full of flavor.</p>
+</article>
 
-  <footer>
-    <p>&copy; 2025 My Travel Page</p>
-  </footer>
-</body>
+
+<article class="card">
 </html>
