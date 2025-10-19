@@ -1,6 +1,39 @@
 /* Reset-ish */
 border-radius: 14px;
 }
+#image {
+  background-color: #ddd;
+  color: #333;
+  text-align: center;
+  padding: 50px;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.3s ease-in-out;
+}
+
+.preview {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.preview img {
+  width: 150px;
+  height: 100px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.preview img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
 
 
 /* Photo gallery uses responsive grid */
@@ -73,3 +106,4 @@ h1 { font-size: 1.6rem; }
 .logo { display: none; }
 .main-nav { justify-content: center; }
 }
+
