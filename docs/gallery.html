@@ -30,6 +30,21 @@
 <img src="images/london.jpg" alt="London bridge" />
 <img src="images/iceland.jpg" alt="Icelandic landscape" />
 <img src="images/marrakesh.jpg" alt="Marrakesh market" />
+  <h2>Interactive Gallery</h2>
+
+<div id="image">
+  Hover over an image below to display here.
+</div>
+
+<div class="preview">
+  <img src="image/eiffeltower.jpg" alt="Eiffel Tower in Paris" onmouseover="upDate(this)" onmouseout="undo()">
+  <img src="image/tokyo.jpg" alt="Tokyo city at night" onmouseover="upDate(this)" onmouseout="undo()">
+  <img src="image/newyork.jpg" alt="New York skyline" onmouseover="upDate(this)" onmouseout="undo()">
+  <img src="image/london.jpg" alt="London Bridge" onmouseover="upDate(this)" onmouseout="undo()">
+</div>
+
+<script src="script.js"></script>
+
 </section>
 
 
@@ -44,4 +59,5 @@
 <p>&copy; 2025 WanderList — Gallery</p>
 </footer>
 </body>
+
 </html>
